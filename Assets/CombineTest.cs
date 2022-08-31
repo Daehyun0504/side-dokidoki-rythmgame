@@ -8,9 +8,7 @@ public class CombineTest : MonoBehaviour
     [SerializeField] public int[] GoalPosing = null;
     [SerializeField] public int[] GoalTiming = null;
 
-    public float deltaTime;
-    public float standard = 2f;
-    public int now = 0;
+    public int timingRotate = 0;
 
     MusicStart theMusicStart;
 
@@ -24,9 +22,9 @@ public class CombineTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(now != 5)
+        if(timingRotate != 5)
         {
-            if (GoalTiming[now] == theMusicStart.BeatTiming)
+            if (GoalTiming[timingRotate] == theMusicStart.BeatTiming)
             {
                 for (int i = 0; i <= 1; i++)
                 {
@@ -35,16 +33,11 @@ public class CombineTest : MonoBehaviour
                     // 동작 결과
                     Debug.Log("Good!");
                 }
-                now++;
+                timingRotate++;
             }
         }
        
 
-       // Debug.Log(theMusicStart.BeatTiming);
-        /*
-        deltaTime += Time.deltaTime;
-        if(standard < deltaTime) Debug.Log(goGameUI[0].transform.position.y);
-        */
 
     }
 }
