@@ -7,6 +7,9 @@ public class MusicStart : MonoBehaviour
     bool musicStart = false;
     public int BeatTiming = 0;
     // Start is called before the first frame update
+
+    
+        
    
 
     // Update is called once per frame
@@ -24,8 +27,6 @@ public class MusicStart : MonoBehaviour
         if (collision.CompareTag("Note"))
         {
             BeatTiming++;
-            
         }
     }
-
 }

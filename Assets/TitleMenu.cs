@@ -10,6 +10,7 @@ public class TitleMenu : MonoBehaviour
     {
         goStageUI.SetActive(true);
         this.gameObject.SetActive(false);
+        AudioManager.instance.PlayBGM("Weekend");
     }
     // Start is called before the first frame update
 }
