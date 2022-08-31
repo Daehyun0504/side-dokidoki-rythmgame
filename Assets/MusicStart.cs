@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicStart : MonoBehaviour
 {
     bool musicStart = false;
+    public int BeatTiming = 0;
     // Start is called before the first frame update
    
 
@@ -19,5 +20,12 @@ public class MusicStart : MonoBehaviour
                 musicStart = true;
             }
         }
+
+        if (collision.CompareTag("Note"))
+        {
+            BeatTiming++;
+            
+        }
     }
+
 }

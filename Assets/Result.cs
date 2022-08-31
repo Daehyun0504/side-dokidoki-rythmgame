@@ -20,7 +20,7 @@ public class Result : MonoBehaviour
     private void Update()
     {
         int t_currentScore = theScore.GetCurrentScore();
-        if (t_currentScore > 100)
+        if (t_currentScore > 2000)
         {
             goUI.SetActive(true);
             txtCoin.text = "Clear";
